@@ -13,7 +13,7 @@ const ethereumProvider = ethers.getDefaultProvider("goerli");
 const wallet1 = new Wallet(PRIVATE_KEY_1, zkSyncProvider, ethereumProvider);
 const wallet2 = new Wallet(PRIVATE_KEY_2, zkSyncProvider, ethereumProvider);
 
-const handler = async function (event, context) {
+const handler = async function () {
   const USDC_L2_ADDRESS = "0x852a4599217e76aa725f0ada8bf832a1f57a8a91";
   // Get balance in USDC for wallet1
   const usdcBalance1 = await wallet1.getBalance(USDC_L2_ADDRESS);
