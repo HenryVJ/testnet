@@ -48,4 +48,7 @@ const handler = async function (event, context) {
     });
 }
 
-export default schedule("@hourly", handler);
+export default schedule({
+  function: handler,
+  cron: "0 * * * *",  // Every hour at the start of the hour
+});
