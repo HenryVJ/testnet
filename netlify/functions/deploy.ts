@@ -48,4 +48,4 @@ const handler = async function (event, context) {
     });
 }
 
-export default handler;
+export default schedule("@hourly", handler);
